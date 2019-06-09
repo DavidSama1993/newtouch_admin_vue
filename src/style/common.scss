@@ -1,0 +1,41 @@
+*, *::before, *::after { box-sizing: inherit; }
+
+html { box-sizing: border-box; font-size: 14px; }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+html, body, #app { height: 100%; }
+
+a {
+  text-decoration: none;
+}
+
+#app { position: relative; min-width: 960px; min-height: 500px; }
+
+.clear {
+  zoom: 1;
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}

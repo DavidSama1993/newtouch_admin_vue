@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 
 import 'normalize.css' // css reset
 
@@ -18,17 +18,21 @@ import './permission'
 
 import * as filters from './filters'
 
+import { output } from './utils'
+
 Vue.use(Element, {
-  size: Cookies.get('size') || 'medium'
+  size: 'mini'
 })
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
+Vue.prototype.output = output
+
 Vue.config.productionTip = false
 
-new Vue({
+window.app = new Vue({
   router,
   store,
   render: h => h(App)

@@ -1,12 +1,9 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <div class="page-header"></div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Header'
 }
 </script>
-
